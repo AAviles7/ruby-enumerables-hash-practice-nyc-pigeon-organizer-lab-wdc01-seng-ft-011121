@@ -7,10 +7,10 @@ def nyc_pigeon_organizer(data)
   data.each do |k1, v1|
     v1.each do |k, v|
       temp = v[0]
-      if !(ans.has_key?(temp))
+      if !(ans.has_key?(temp)) && k[0].include?(temp)
         ans[temp] = inner
         ans[temp][k1].push(k.to_s)
-      else
+      elsif k[0].include?(temp)
         ans[temp][k1].push(k.to_s)
       end
       
