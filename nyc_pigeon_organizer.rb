@@ -1,24 +1,19 @@
 def nyc_pigeon_organizer(data)
   # write your code here!
   
-  ans = Hash.new
-  inner = {:color => [], :gender => [], :lives => []}
-  
-  data.each do |k1, v1|
-    v1.each do |k, v|
-      temp = v[0]
-      if !(ans.has_key?(temp)) && v.include?(temp)
-        ans[temp] = inner
-        ans[temp][k1].push(k.to_s)
-      elsif v.include?(temp)
-        ans[temp][k1].push(k.to_s)
+  ans = data.each_with_object({}) do |(k, v), ans|
+    v.each do |inner, names|
+      names.each do |name|
+        if !ans[name]
+          ans[name] = {}
+        end
+        if !ans[name][k]
+          !ans[name][k] = []
+        end
+        ans[name][k].push(inner.to_s)
       end
-      
     end
   end
-  
-  puts ans
-  return ans
   
 end
 
