@@ -6,7 +6,18 @@ def nyc_pigeon_organizer(data)
   
   data.each do |k1, v1|
     v1.each do |k, v|
-      puts "k1:#{k1}    v1:#{v1}    k:#{k}    v:#{v}"
+      x = 0
+      while x < v.length do
+        temp = v[x]
+        puts "count: #{x}   temp:#{temp}    #{!(ans.has_key?(temp))}   #{v.include?(temp)}    #{k}  #{v}   #{v.length}"
+        if !(ans.has_key?(temp)) && v.include?(temp)
+          ans[temp] = inner
+          ans[temp][k1].push(k.to_s)
+        elsif v.include?(temp)
+          ans[temp][k1].push(k.to_s)
+        end
+        x += 1
+      end
     end
   end
   
@@ -16,6 +27,15 @@ def nyc_pigeon_organizer(data)
 end
 
 =begin
+k1:color    
+v1:{:purple=>["Theo", "Peter Jr.", "Lucky"], 
+    :grey=>["Theo", "PeterJr.", "Ms. K"], 
+    :white=>["Queenie", "Andrew", "Ms. K", "Alex"], 
+    :brown=>["Queenie", "Alex"]}    
+
+k:purple   
+v:["Theo", "Peter Jr.", "Lucky"]
+
 pigeon_data = {
   :color => {
     :purple => ["Theo", "Peter Jr.", "Lucky"],
