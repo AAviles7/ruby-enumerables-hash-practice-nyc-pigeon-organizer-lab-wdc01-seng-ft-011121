@@ -5,9 +5,10 @@ def nyc_pigeon_organizer(data)
   inner = {:color => [], :gender => [], :lives => []}
   
   data.each do |k1, v1|
+    x = 0
     v1.each do |k, v|
-      x = 0
-      while x < v.length do
+      
+      #while x < v.length do
         temp = v[x]
         if !(ans.has_key?(temp))
           ans[temp] = inner
@@ -16,7 +17,7 @@ def nyc_pigeon_organizer(data)
           ans[temp][k1].push(k.to_s)
         end
         x += 1
-      end
+     # end
     end
   end
   
