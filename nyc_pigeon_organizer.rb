@@ -7,7 +7,7 @@ def nyc_pigeon_organizer(data)
   data.each do |k1, v1|
     x = 0
     v1.each do |k, v|
-      
+      puts "x:#{x}   temp:#{temp}   "
       #while x < v.length do
         temp = v[x]
         if !(ans.has_key?(temp))
