@@ -1,16 +1,16 @@
 def nyc_pigeon_organizer(data)
   # write your code here!
   
-  ans = data.each_with_object({}) do |(k, v), ans|
-    v.each do |inner, names|
+  final = data.each_with_object({}) do |(key, value), final|
+    value.each do |inner, names|
       names.each do |name|
-        if !ans[name]
-          ans[name] = {}
+        if !final[name]
+          final[name] = {}
         end
-        if !ans[name][k]
-          !ans[name][k] = []
+        if !final[name][key]
+          !final[name][key] = []
         end
-        ans[name][k].push(inner.to_s)
+        final[name][key].push(inner.to_s)
       end
     end
   end
