@@ -13,7 +13,7 @@ def nyc_pigeon_organizer(data)
         if !(ans.has_key?(temp)) && v.include?(temp)
           ans[temp] = inner
           ans[temp][k1].push(k.to_s)
-        elsif v.include?(temp)
+        else
           ans[temp][k1].push(k.to_s)
         end
         x += 1
