@@ -15,7 +15,7 @@ def nyc_pigeon_organizer(data)
           ans[temp][k1].push(k.to_s)
         #elsif v.include?(temp)
           ans[temp][k1].push(k.to_s)
-        #end
+        end
         x += 1
       end
     end
