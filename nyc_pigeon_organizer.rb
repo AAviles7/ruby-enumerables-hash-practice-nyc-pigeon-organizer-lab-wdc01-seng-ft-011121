@@ -1,7 +1,9 @@
 def nyc_pigeon_organizer(data)
   # write your code here!
   
-  final = data.each_with_object({}) do |(key, value), final|
+  final = 
+  data.each_with_object({}) do |(key, value), final|
+    
     value.each do |inner, names|
       names.each do |name|
         if !final[name]
@@ -13,8 +15,9 @@ def nyc_pigeon_organizer(data)
         final[name][key].push(inner.to_s)
       end
     end
+    
   end
-  
+  return final
 end
 
 =begin
