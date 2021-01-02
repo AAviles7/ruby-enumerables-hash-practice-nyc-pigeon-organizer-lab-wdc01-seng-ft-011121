@@ -23,15 +23,6 @@ def nyc_pigeon_organizer(data)
 end
 
 =begin
-k1:color    
-v1:{:purple=>["Theo", "Peter Jr.", "Lucky"], 
-    :grey=>["Theo", "PeterJr.", "Ms. K"], 
-    :white=>["Queenie", "Andrew", "Ms. K", "Alex"], 
-    :brown=>["Queenie", "Alex"]}    
-
-k:purple   
-v:["Theo", "Peter Jr.", "Lucky"]
-
 pigeon_data = {
   :color => {
     :purple => ["Theo", "Peter Jr.", "Lucky"],
@@ -50,9 +41,5 @@ pigeon_data = {
     "City Hall" => ["Andrew"]
   }
 }
-
-
-puts "count: #{x}   temp:#{temp}    #{!(ans.has_key?(temp))}   #{v.include?(temp)}    #{k}  #{v}   #{v.length}"
-
 
 =end
