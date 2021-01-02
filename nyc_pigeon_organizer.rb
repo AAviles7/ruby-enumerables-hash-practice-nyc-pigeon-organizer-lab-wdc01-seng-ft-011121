@@ -7,15 +7,13 @@ def nyc_pigeon_organizer(data)
   data.each do |k1, v1|
     v1.each do |k, v|
       
-      #while x < v.length do
-        temp = v[0]
-        if !(ans.has_key?(temp))
-          ans[temp] = inner
-          ans[temp][k1].push(k.to_s)
-        else
-          ans[temp][k1].push(k.to_s)
-        end
-     # end
+      if !(ans.has_key?(v))
+        ans[v] = inner
+        ans[v][k1].push(k.to_s)
+      else
+        ans[v][k1].push(k.to_s)
+      end
+      
     end
   end
   
