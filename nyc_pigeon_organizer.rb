@@ -9,7 +9,7 @@ def nyc_pigeon_organizer(data)
       x = 0
       while x < v.length do
         temp = v[x]
-        #puts "count: #{x}   temp:#{temp}    #{!(ans.has_key?(temp))}   #{v.include?(temp)}    #{k}  #{v}   #{v.length}"
+        puts "count: #{x}   temp:#{temp}    #{!(ans.has_key?(temp))}   #{v.include?(temp)}    #{k}  #{v}   #{v.length}"
         if !(ans.has_key?(temp)) && v.include?(temp)
           ans[temp] = inner
           ans[temp][k1].push(k.to_s)
